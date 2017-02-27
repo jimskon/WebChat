@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,16 +8,13 @@
 <body bgcolor="#E6E6FA" onload="pageInit()">
 	<script src="selfChat.js" > </Script>
 	<h2>Self Texting Program</h2>
-	<p>A demo program for Software Development</p>
+	<p>A demo program for Software Development with a div text box to allow formatting</p>
 	<p class="small">Enter your text message below:</p>
-	<form name="chatForm">
-		<input class="textinput" name="textInput" type="text" id=textInput maxlength=50></td>
-
-		<p>
-			<input type="button" onclick="javascript: addText()" name="addtext" value="Send" />
-		</p>
+	<form name="chatForm">	
+		<input class="textinput" name="textInput" type="text" maxlength=50 /><br />
+		<input type="button" onclick="javascript: addText()" value="Send" />
 		<h2>Chat box</h2>
-		<textarea readonly class="scrollabletextbox" name="chatText" value=""></textarea>
+		<div class="scrollabletextbox" id="chatBox"></div>
 	</form>
 </body>
 </html>

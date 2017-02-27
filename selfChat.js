@@ -1,7 +1,12 @@
-
 // Things to do at page load
 function pageInit() {
 
+}
+
+// Function to force scrollable window to bottom
+function updateScroll(){
+    var element = document.getElementById("chatBox");
+    element.scrollTop = element.scrollHeight;
 }
 
 // Respond to send button
@@ -16,5 +21,7 @@ function addText() {
     document.chatForm.textInput.value = "";
 	
     // add to the bottom of the chat box
-    document.chatForm.chatText.innerHTML += "You: " + inText+"\n";
+    document.getElementById('chatBox').innerHTML += "<font color='red'>You: </font>" + inText+"<br />";
+    // force to bottom
+    updateScroll();
 }
